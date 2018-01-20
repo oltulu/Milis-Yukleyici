@@ -164,14 +164,14 @@ class Kullanici(QWidget):
         self.ileri_kontrol()
 
     def giris_sifresi_kontrol(self):
-        if len(self.giris_sifresi.text()) > 5 and self.giris_sifresi.text() == self.giris_sifresi_tekrar.text():
+        if len(self.giris_sifresi.text()) > 4 and self.giris_sifresi.text() == self.giris_sifresi_tekrar.text():
             self.giris_sifresi_ = self.giris_sifresi.text()
             self.giris_sifresi_icon.setPixmap(QPixmap("./resimler/oldu.svg"))
             self.giris_sifresi_info.setText("")
         else:
             self.giris_sifresi_ = None
             self.giris_sifresi_icon.setPixmap(QPixmap("./resimler/olmadi.svg"))
-            self.giris_sifresi_info.setText(self.e.d[self.e.s_d]["5 karakterden fazla ve şifreler aynı olmalı"])
+            self.giris_sifresi_info.setText(self.e.d[self.e.s_d]["4 karakterden fazla ve şifreler aynı olmalı"])
         self.ileri_kontrol()
 
     def admin_sifresi_kontrol(self):
